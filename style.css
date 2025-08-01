@@ -1,0 +1,410 @@
+:root {
+    --primary: #00ADB5;
+    --secondary: #393E46;
+    --dark: #222831;
+    --light: #EEEEEE;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --button-size: 55px;
+    --error: #ff5252;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-decoration: none;
+    background-color: var(--dark);
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    transition: var(--transition);
+}
+
+#Calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--secondary);
+    padding: 20px;
+    border: 2px solid var(--light);
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+    transition: var(--transition);
+    max-width: 350px;
+    width: 100%;
+}
+
+#CalculatorButtons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+#buttonNumbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 80%;
+}
+
+button {
+    box-shadow: var(--shadow);
+    border-radius: 12px;
+    font-size: 22px;
+    width: var(--button-size);
+    height: var(--button-size);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--light);
+    color: var(--dark);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#CalculatorDisplay {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 28px;
+    font-family: 'Courier New', monospace;
+    border-radius: 10px;
+    text-align: right;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 100%;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.calculation-history {
+    font-size: 14px;
+    color: #666;
+    text-align: right;
+    height: 20px;
+    padding: 0 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Improve the result display */
+.result-display {
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 28px;
+    font-family: 'Courier New', monospace;
+    border-radius: 10px;
+    text-align: right;
+    background-color: #f8f9fa;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    color: var(--dark);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+/* Enhanced light theme colors and text */
+.light-theme {
+    --primary: #00adb5;
+    --secondary: #f0f0f0;
+    --dark: #333333;
+    --light: #ffffff;
+    background-color: #f5f5f5;
+}
+
+.light-theme #Calculator {
+    border-color: #d0d0d0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.light-theme .result-display {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .calculation-history {
+    color: #777;
+}
+
+.light-theme .number-button {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.light-theme .function-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.light-theme .clear-button {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.light-theme .equals-button {
+    background-color: var(--primary);
+    color: white;
+}
+
+.light-theme .backspace-button {
+    background-color: #aaa;
+    color: white;
+}
+
+/* Improve text rendering for all themes */
+button, .calculator-title, .result-display {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the calculator display has proper text contrast */
+#CalculatorDisplay {
+    /* existing code remains the same */
+}
+
+/* Fix the history and result display in light theme */
+.light-theme #CalculatorDisplay {
+    background-color: transparent;
+}
+
+/* Enhance theme toggle button appearance */
+.light-theme .theme-toggle {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 173, 181, 0.15);
+    transform: rotate(15deg);
+}
+
+/* Add subtle hover effect for buttons in light theme */
+.light-theme button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.light-theme .function-button:hover {
+    background: #00adb5;
+    color: white;
+}
+
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.calculator-title {
+    font-size: 1.2rem;
+    color: var(--light);
+    margin: 0;
+    font-weight: 500;
+}
+
+.theme-toggle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--light);
+    border: 1px solid var(--light);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    font-size: 18px;
+    padding: 0;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(15deg);
+}
+
+.calculator-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.backspace-button {
+    font-size: 18px;
+    width: auto;
+    padding: 0 15px;
+    background-color: #777;
+    color: white;
+}
+
+/* Active state for button press animation */
+button.active {
+    transform: scale(0.95);
+    background-color: var(--primary);
+    color: white;
+}
+
+.equals-button {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Function button styling */
+.function-button {
+    background-color: #444;
+    color: white;
+}
+
+.clear-button {
+    background-color: var(--error);
+    color: white;
+}
+
+/* Dark/light theme toggle class */
+.light-theme {
+    --primary: #00adb5;
+    --secondary: #f0f0f0;
+    --dark: #333333;
+    --light: #ffffff;
+    background-color: #f5f5f5;
+}
+
+/* Accessibility improvements */
+button:focus {
+    outline: 3px solid rgba(0, 173, 181, 0.5);
+}
+
+/* Responsive design improvements */
+@media (max-width: 600px) {
+    :root {
+        --button-size: 45px;
+    }
+    
+    button {
+        font-size: 18px;
+    }
+
+    #Calculator {
+        padding: 15px;
+        max-width: 300px;
+    }
+    
+    #CalculatorDisplay {
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 350px) {
+    :root {
+        --button-size: 40px;
+    }
+    
+    #Calculator {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    #CalculatorButtons {
+        gap: 8px;
+    }
+    
+    #buttonNumbers {
+        gap: 5px;
+    }
+    
+    #buttonFunctions {
+        gap: 5px;
+    }
+    
+    button {
+        font-size: 16px;
+    }
+}
+
+/* Dark/light theme adjustments for new elements */
+.light-theme .calculator-title {
+    color: var(--dark);
+}
+
+.light-theme .theme-toggle {
+    color: var(--dark);
+    border-color: var(--dark);
+}
+
+.light-theme .function-button {
+    background-color: #ddd;
+    color: var(--dark);
+}
+
+.light-theme .calculation-history {
+    color: #555;
+}
+
+/* Fix the duplicate light-theme declaration and a CSS comment syntax error */
+
+/* Remove this duplicate declaration as it's overridden later */
+.light-theme {
+    --primary: #00adb5;
+    --secondary: #f0f0f0;
+    --dark: #292929;
+    --light: #ffffff;
+    background-color: #f5f5f5;
+}
+
+/* Fix CSS comment syntax in #CalculatorDisplay - it used JS-style comments */
+#CalculatorDisplay {
+    /* existing code remains the same */
+}
+
+/* Add animation for theme transition */
+.theme-transition {
+    animation: theme-fade 0.3s ease;
+}
+
+@keyframes theme-fade {
+    0% { opacity: 0.8; transform: scale(0.98); }
+    100% { opacity: 1; transform: scale(1); }
+}

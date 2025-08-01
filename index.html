@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="A modern, responsive calculator with advanced UI/UX features">
+    <meta name="theme-color" content="#222831">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <main>
+        <div id="Calculator">
+            <div class="calculator-header">
+                <h1 class="calculator-title">Calculator</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+                    <span class="theme-icon">☀️</span>
+                </button>
+            </div>
+            
+            <div id="CalculatorDisplay">
+                <div id="history" class="calculation-history"></div>
+                <div id="box" class="result-display">0</div>
+            </div>
+            
+            <div id="CalculatorButtons" class="buteni">
+                <div id="buttonFunctions">
+                    <button onclick="addFunction('clear')" class="function-button clear-button">C</button>
+                    <button onclick="addFunction('+')" class="function-button">+</button>
+                    <button onclick="addFunction('-')" class="function-button">−</button>
+                    <button onclick="addFunction('*')" class="function-button">×</button>
+                    <button onclick="addFunction('/')" class="function-button">÷</button>
+                </div>
+                <div id="buttonNumbers">
+                    <button onclick="addNumber('7')" class="number-button">7</button>
+                    <button onclick="addNumber('8')" class="number-button">8</button>
+                    <button onclick="addNumber('9')" class="number-button">9</button>
+                    <button onclick="addNumber('4')" class="number-button">4</button>
+                    <button onclick="addNumber('5')" class="number-button">5</button>
+                    <button onclick="addNumber('6')" class="number-button">6</button>
+                    <button onclick="addNumber('1')" class="number-button">1</button>
+                    <button onclick="addNumber('2')" class="number-button">2</button>
+                    <button onclick="addNumber('3')" class="number-button">3</button>
+                    <button onclick="addNumber('.')" class="number-button">.</button>
+                    <button onclick="addNumber('0')" class="number-button">0</button>
+                    <button onclick="addFunction('=')" id="btnEquals" class="equals-button">=</button>
+                </div>
+            </div>
+            <div class="calculator-footer">
+                <button onclick="addFunction('backspace')" class="backspace-button" aria-label="Delete last digit">⌫</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

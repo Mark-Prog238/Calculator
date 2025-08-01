@@ -2,7 +2,7 @@
 
 A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. This project demonstrates front-end development skills with a focus on clean design, accessibility, and modern UI/UX principles.
 
-![Calculator Preview](https://media.discordapp.net/attachments/1376646019126788301/1400868229907480677/image.png?ex=688e33b4&is=688ce234&hm=7ba4f25077720ff2e7e87c4a562a00eb0d2cb32930c2a95d160996998b349c91&=&format=webp&quality=lossless&width=1302&height=1700)
+![Calculator Preview](https://media.discordapp.net/attachments/1400467397189701837/1400865939200806972/SPOILER_image.png?ex=688e3192&is=688ce012&hm=5e69cb6c951691806b013e3e64e8836f00052a3e17ab3a2280a88b732eae2438&=&format=webp&quality=lossless&width=2294&height=1492800x400?text=Calculator+Preview)
 
 ## Features
 
