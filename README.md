@@ -17,7 +17,7 @@ A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Thi
 
 ## Live Demo
 
-You can try the calculator live [here](https://Mark-Prog238.github.io/calculator/) (replace with your actual GitHub Pages URL once deployed).
+## You can try the calculator live [here](https://Mark-Prog238.github.io/calculator/) (replace with your actual GitHub Pages URL once deployed).
 
 ## Installation and Setup
 
