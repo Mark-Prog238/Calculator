@@ -15,10 +15,6 @@ A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Thi
 - **Calculation History**: See your current calculation in progress
 - **Local Storage**: Remembers your preferred theme
 
-## Live Demo
-
-## You can try the calculator live [here](https://Mark-Prog238.github.io/calculator/) (replace with your actual GitHub Pages URL once deployed).
-
 ## Installation and Setup
 
 ```bash
