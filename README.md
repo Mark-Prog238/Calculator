@@ -17,13 +17,13 @@ A sleek, responsive calculator built with vanilla JavaScript, HTML, and CSS. Thi
 
 ## Live Demo
 
-You can try the calculator live [here](https://mark-prog238.github.io/calculator/) (replace with your actual GitHub Pages URL once deployed).
+You can try the calculator live [here](https://Mark-Prog238.github.io/calculator/) (replace with your actual GitHub Pages URL once deployed).
 
 ## Installation and Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/mark-prog238/calculator.git
+git clone https://github.com/Mark-Prog238/calculator.git
 
 # Navigate to the project directory
 cd calculator
